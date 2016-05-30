@@ -1,0 +1,13 @@
+<div ng-controller="groupCtrl">
+
+  <button class="button button-icon icon ion-plus-round" ng-click="addGroupName()">
+  Add Group</button>
+
+  <br>
+  <ion-list>
+      <ion-item ng-click="click(data)" ng-repeat="data in datas" type="item-text-wrap">
+        <h2>{{data.name}}</h2>
+      </ion-item>
+    </ion-list>
+
+</div>

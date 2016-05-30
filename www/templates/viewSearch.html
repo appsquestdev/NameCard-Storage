@@ -1,0 +1,20 @@
+<ion-view view-title="List">
+  <ion-nav-buttons side="secondary">
+    <button class="button button-icon icon ion-search" ng-click="showFilterBar()">
+    </button>
+  </ion-nav-buttons>
+  <ion-content padding="false">
+    <ion-list>
+
+      <ion-item ng-repeat="search in searchs" type="item-text-wrap" href="#/app/cardsdetails" ng-click="viewdetails(search)">
+        <a class="ng-hide">{{search.id}}</a>
+        <h2>{{search.name}}</h2>
+        <p>{{search.position}}</p>
+        <p>{{search.company}}</p>
+
+      </ion-item>
+    </ion-list>
+
+
+  </ion-content>
+</ion-view>

@@ -1,0 +1,49 @@
+<ion-view view-title="Group">
+  <ion-nav-buttons side="secondary">
+    <button class="button button-icon icon ion-search" ui-sref="app.viewSearch">
+    </button>
+  </ion-nav-buttons>
+  <ion-content padding="false">
+    <ion-list>
+
+      <ion-item ng-repeat="grup in grps" type="item-text-wrap" href="#/app/listcard-model" ng-click="showContacts(grup)">
+        <div class="row">
+          <div class="col col-10"></div>
+          <div class="col col-90">
+            <h2>{{grup.name}}</h2>
+          </div>
+
+        </div>
+
+      </ion-item>
+    </ion-list>
+
+
+  </ion-content>
+</ion-view>
+
+
+<script id="listcard-model.html" type="text/ng-template">
+  <ion-view view-title="Cards">
+    <ion-header-bar>
+      <button class="button button-icon icon ion-search" ng-click="showSearchPage()">
+      </button>
+    </ion-header-bar>
+    <ion-content padding="false" >
+      <ion-list>
+        <ion-item ng-repeat="data in datas" type="item-text-wrap" href="#/app/cardsdetails" ng-click="viewdetails(data)">
+          <a class="ng-hide">{{data.id}}</a>
+          <h2>{{data.name}}</h2>
+          <p>{{data.position}}</p>
+          <p>{{data.company}}</p>
+
+        </ion-item>
+      </ion-list>
+
+      <div ng-if="datas === undefined" class="no-results">
+        <p style="padding: 10px">No Cards Here</p>
+      </div>
+
+    </ion-content>
+  </ion-view>
+</script>

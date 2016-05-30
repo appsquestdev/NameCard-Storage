@@ -1,0 +1,18 @@
+<ion-view view-title="New Card">
+  <ion-content ng-controller="CameraCtrl" padding="true">
+
+    <button class="button button-full button-assertive" ng-click="takePhoto()">
+      Take Photo
+    </button>
+    <button class="button button-full button-assertive" ng-click="choosePhoto()">
+      Choose Photo
+    </button>
+
+    <center>
+      <img src="imgURI !== undefined" ng-src="{{imgURI}}" style="text-align: center" id="pic"/>
+    </center>
+
+
+
+  </ion-content>
+</ion-view>

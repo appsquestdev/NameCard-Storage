@@ -1,0 +1,149 @@
+<ion-view view-title="Edit Profile" ng-controller="editProfileCtrl">
+  <ion-nav-buttons side="secondary">
+    <a class="button" ui-sref="app.home">Cancel</a>
+  </ion-nav-buttons>
+  <ion-content padding="true" class="has-header">
+
+          <div class="list">
+            <div class="row">
+              <div class="col col-20 col-center">
+                <div class="circle-image-container">
+                  <a ng-click="uploadPhoto()"><img ng-src="{{uploadedPic ? uploadedPic : 'img/profileblank.png'}}"></a>
+                </div>
+              </div>
+              <div class="col col-80">
+                    <label class="item item-input">
+                      <span class="input-label">Name</span>
+                      <input type="text" placeholder="Name" ng-model="name">
+                    </label>
+                    <label class="item item-input">
+                      <span class="input-label">Position</span>
+                      <input type="text" placeholder="Add Position" ng-model="position">
+                    </label>
+                    <label class="item item-input">
+                      <span class="input-label">Company</span>
+                      <input type="text" placeholder="Add Company" ng-model="company">
+                    </label>
+                  </div>
+                </div>
+            </div>
+
+
+          Contact Information
+          <div class="list">
+            <label class="item item-input">
+              <span class="input-label">Mobile</span>
+              <input type="text" placeholder="Add Mobile" ng-model="mobile">
+            </label>
+            <label class="item item-input">
+              <span class="input-label">Office Tel</span>
+              <input type="text" placeholder="Add Office Tel" ng-model="officeNo">
+            </label>
+              <label class="item item-input">
+                <span class="input-label">Email</span>
+                <input type="text" placeholder="Add Email" ng-model="email">
+              </label>
+            </div>
+
+            Work Information
+            <div class="list">
+              <label class="item item-input">
+                <span class="input-label">Department</span>
+                <input type="text" placeholder="Add Department" ng-model="department">
+              </label>
+              <label class="item item-input">
+                <span class="input-label">Address</span>
+                <input type="text" placeholder="Add Address" ng-model="address">
+              </label>
+                <label class="item item-input">
+                  <span class="input-label">Website</span>
+                  <input type="text" placeholder="Add Website" ng-model="website">
+                </label>
+              </div>
+
+              Group
+              <div class="list">
+                <label class="item item-input">
+                  <div class="input-label">Group</div>
+                  <a><label ng-click="groupname()">{{gName}}</label></a>
+                </label>
+              </div>
+
+              <button class="button button-block button-positive" ng-click="save(name,position,company,mobile,officeNo,email,department,address,website);openModal();">Save
+              </button>
+
+
+  </ion-content>
+</ion-view>
+
+
+<script id="view-modal.html" type="text/ng-template">
+  <ion-modal-view>
+    <ion-header-bar class="bar bar-dark">
+          <h1 class="title">Details</h1>
+          <button class="button" ng-click="close()">Back</button>
+        </ion-header-bar>
+    <ion-content padding="true">
+      <div class="list" padding="true">
+
+        <div class="list" padding="true">
+          <li class="dark">
+            <br>
+          <div class="circle-image-container">
+
+            <a><img ng-src="{{proPic ? proPic : 'img/profileblank.png'}}" class="center"></a>
+
+          </div><br>
+
+          <a class="center"><label>{{name}}</label></a>
+          <a class="center"><label>{{position}}</label></a>
+          <a class="center"><label>{{company}}</label></a>
+          <br>
+          </li>
+        </div>
+
+
+        <pre> Contact Information</pre>
+        <div class="list" >
+          <label class="item item-input">
+            <span class="input-label">Mobile</span>
+              <a><label>{{mobile}}</label><i class="icon ion-ios-telephone-outline right"></i></a>
+          </label>
+          <label class="item item-input">
+            <span class="input-label">Office Tel</span>
+              <a><label>{{officeNo}}</label></a>
+          </label>
+          <label class="item item-input">
+            <span class="input-label">Email</span>
+              <a><label>{{email}}</label></a>
+          </label>
+        </div>
+
+        <pre> Work Information</pre>
+        <div class="list">
+          <label class="item item-input">
+            <span class="input-label">Department</span>
+              <a><label>{{department}}</label></a>
+          </label>
+          <label class="item item-input">
+            <span class="input-label">Address</span>
+              <a><label>{{address}}</label></a>
+          </label>
+            <label class="item item-input">
+              <span class="input-label">Website</span>
+              <a><label>{{website}}</label></a>
+            </label>
+        </div>
+
+        <pre> Group</pre>
+        <div class="list">
+          <label class="item item-input">
+            <div class="input-label">Group</div>
+            <a><label>{{gName}}</label></a>
+          </label>
+        </div>
+
+      </div>
+    </ion-content>
+  </ion-modal-view>
+</script>

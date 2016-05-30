@@ -1,0 +1,136 @@
+/* Empty. Add your own CSS if you like */
+#fhm_page .scroll,
+.fhm_container {
+  position:absolute;
+  top:0;
+  right:0;
+  left:0;
+  bottom:0;
+  text-align: center;
+
+}
+
+.fhm_row {
+  /* position: absolute; */
+
+  color: white;
+  height: 33.3%;
+  left:0;
+  right:0;
+  background-color:#FF0000;
+  clear:both;
+}
+.fhm_row img{
+  max-width: 100%;
+  max-height: 100%;
+}
+.fhm_item1 {
+
+  height: 100%;
+  width:100%;
+  background-color: #ED7747;
+  border: 1px solid #FFFFFF;
+  float:left;
+}
+.fhm_item2 {
+  height: 100%;
+  width:100%;
+  background-color: #7F726C;
+  border: 1px solid #FFFFFF;
+  float:left;
+}
+.fhm_item3 {
+  height: 100%;
+  width:100%;
+  background-color: #252733;
+  border: 1px solid #FFFFFF;
+  float:left;
+}
+
+
+.custom {
+  background-color: #1C2836 !important; /* This sets the background color*/
+ }
+
+/*Set the background to transparent for ion-item*/
+.custom .item {
+  background-color: transparent;
+  border:none;   /*Removes all borders*/
+  border-top: 1px solid;   /*Top Border for each menu item*/
+  border-bottom:2px solid;   /*Bottom border for each menu item*/
+  border-color: #666;   /*Sets colors for top and bottom border*/
+  color: white;    /*Text color for each item*/
+}
+
+/*Changes the border for the last item*/
+.custom .item:last-child {
+  border-bottom: 1px solid #666;
+}
+
+.custom .item-complex .item-content, .dark .item-radio .item-content {
+  background-color: transparent;
+}
+
+/*Just makes the type white*/
+.custom h2,
+.custom h3,
+.custom p,
+.custom a {
+  color: white;  /*Text color for seach item, overrides the color property above*/
+}
+
+.slider{
+    height: 33.3%;
+
+}
+.slider-slide {
+
+
+}
+.card .item{
+  color : #FFFFFF;
+  background-color: #1C2836;
+}
+.circle-image-container img{
+  height: 60px;
+  width: 60px;
+  border-radius: 50px;
+  border: solid 1px grey;
+}
+.dark {
+  background-color: #1C2836;
+}
+img-crop{
+    position : inherit !important;
+}
+
+img-crop canvas{
+    margin-left : 0 !important;
+    top : 15% !important;
+    left: 0 !important;
+    right: 0 !important;
+    margin: 0 auto !important;
+}
+
+.popup {
+width: 300px !important;
+height: 300px;
+}
+
+.center {
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    text-align: center;
+}
+.ng-hide {
+  /* this is just another form of hiding an element */
+  display: block!important;
+  position: absolute;
+  top: -9999px;
+  left: -9999px;
+}
+.right {
+    position: absolute;
+    right: 0px;
+}
